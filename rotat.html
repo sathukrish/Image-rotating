@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image rotated</title>
+    <style>
+        body{
+            background: linear-gradient(90deg, blue, skyblue, blue);
+        }
+        img{
+            width: 250px;
+            height: 250px;
+            position: absolute;
+        }
+        .container{
+            width: 350px;
+            height: 200px;
+            position: relative;
+            margin-top: 15%;
+            margin-left: 40%;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            transform: rotateX(-10deg) rotateZ(-10deg);
+            animation: ror 20s linear infinite;
+        }
+        @keyframes ror{
+            50%{
+                transform: rotateX(30deg);
+            }
+            80%{
+                transform: rotateX(-30deg);
+            }
+        }
+        .images{
+            width: 100px;
+            position: absolute;
+            transform-style: preserve-3d;
+            animation: rotate 20s linear infinite;
+        }
+        @keyframes rotate{
+            to{
+                transform: rotateY(360deg);
+            }
+        }
+
+        img:nth-child(1){
+            transform: rotateY(60deg) translateZ(300px);
+        }
+        img:nth-child(2){
+            transform: rotateY(120deg) translateZ(300px);
+        }
+        img:nth-child(3){
+            transform: rotateY(180deg) translateZ(300px);
+        }
+        img:nth-child(4){
+            transform: rotateY(240deg) translateZ(300px);
+        }
+        img:nth-child(5){
+            transform: rotateY(300deg) translateZ(300px);
+        }
+        img:nth-child(6){
+            transform: rotateY(360deg) translateZ(300px);
+        }
+        .name{
+            font-size: 200%;
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="images">
+            <img src="images/FB_IMG_1622285656519.jpg">
+            <img src="images/FB_IMG_1622285758847.jpg">
+            <img src="images/FB_IMG_1622285818927.jpg">
+            <img src="images/1660382025595.jpg">
+            <img src="images/FB_IMG_1622285639560.jpg">
+            <img src="images/Snapchat-1879713656.jpg">
+        </div>
+     </div>
+     <p class="name">Sathu's gallery (^_^)</p>
+</body>
+</html>
